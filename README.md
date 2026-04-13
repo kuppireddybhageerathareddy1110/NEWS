@@ -1,4 +1,5 @@
 # 📰 NewsHub - Personalized News Aggregator
+Live: [Live](https://news-omega-ecru.vercel.app/)
 
 A modern, full-stack news aggregation platform built with Next.js 14, designed specifically for tech enthusiasts, engineers, and UPSC/government job aspirants.
 
