@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply overflow-x-hidden bg-primary text-text-primary antialiased;
+  }
+
+  ::selection {
+    background: rgba(217, 119, 6, 0.15);
+    color: #1A1A1A;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply shadow-card-hover;
+    transform: translateY(-2px);
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-amber-600 to-orange-700;
+  }
+  
+  .anthropic-card {
+    @apply bg-secondary rounded-2xl border border-border-default shadow-card transition-all duration-500 ease-out;
+  }
+
+  .anthropic-card:hover {
+    @apply border-accent/30 shadow-card-hover;
+    transform: translateY(-5px) scale(1.01);
+  }
+  
+  .glow {
+    box-shadow: 0 0 20px rgba(217, 119, 6, 0.15);
+  }
+  
+  .news-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
+  }
+
+  .anthropic-btn {
+    @apply inline-flex items-center px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200;
+  }
+
+  .anthropic-btn-primary {
+    @apply anthropic-btn bg-accent text-white hover:bg-accent-hover shadow-sm hover:shadow-md;
+  }
+
+  .anthropic-btn-ghost {
+    @apply anthropic-btn text-text-secondary hover:bg-surface hover:text-text-primary;
+  }
+
+  .anthropic-input {
+    @apply w-full px-4 py-3 bg-secondary border border-border-default rounded-xl text-text-primary placeholder-text-muted outline-none transition-all duration-200;
+    @apply focus:border-accent focus:ring-2 focus:ring-accent/10;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Anthropic-styled scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF9F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4D0C8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B4AC;
+}
+
+/* Smooth focus rings */
+*:focus-visible {
+  outline: 2px solid #D97706;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
